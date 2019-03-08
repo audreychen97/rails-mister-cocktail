@@ -1,6 +1,12 @@
-<h1>Cocktails</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/05/22/13/gin-cocktails.jpg?w968h681);">
+  <div class="container">
+    <h1>Cocktails that <strong>you</strong> design!</h1>
+    <p>Change your life and learn to design cocktails here</p>
+    <p><%= link_to "Design a New Cocktail", new_cocktail_path, class: "btn btn-primary"%></p>
+  </div>
+</div>
+
+
 <% @cocktails.each do |cocktail| %>
   <div class="card"><%= link_to cocktail.name, cocktail_path(cocktail), class: "card-category"%></div>
 <% end %>
-
-<%= link_to "Create a New cocktail", new_cocktail_path, class: "btn btn-primary"%>
